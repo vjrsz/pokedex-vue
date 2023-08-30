@@ -14,12 +14,13 @@ class PokeApiService{
                 limit: 100
             }
         })
+            
+        let results = await response.data.results.map(async pokemon => {
+            pokemmon.status = await this.find(pokemon.url);
+        })
 
-        for(let pokemon of response.data.results) {
-            status = await this.find(pokemon.url);
-            console.log(status)
-        }
-
+        response.data.results = results
+        
         return response.data
     }
 
