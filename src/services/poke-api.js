@@ -15,10 +15,10 @@ class PokeApiService{
             }
         })
 
-        /*for(let pokemon in response.data.results) {
+        for(let pokemon of response.data.results) {
             status = await this.find(pokemon.url);
-            console.log(pokemon)
-        }*/
+            console.log(status)
+        }
 
         return response.data
     }
