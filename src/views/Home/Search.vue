@@ -11,10 +11,10 @@
     </section>
 </template>
 <script>
-    import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+    import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
     export default {
-        name: 'Search',
+        name: 'SearchHome',
         components: {FontAwesomeIcon},
         data: function(){
             return {

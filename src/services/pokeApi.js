@@ -11,16 +11,15 @@ class PokeApiService{
         let response = await this.apiClient.get('/', {
             params: {
                 offset: 20,
-                limit: 100
+                limit: 20
             }
         })
-            
-        let results = await response.data.results.map(async pokemon => {
-            pokemmon.status = await this.find(pokemon.url);
-        })
 
-        response.data.results = results
-        
+        response.data.results = await Promise.all(response.data.results.map(async pokemon => {
+            pokemon.status = await this.find(pokemon.url);
+            return pokemon;
+        }))
+
         return response.data
     }
 
