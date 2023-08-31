@@ -3,12 +3,12 @@ import axios from 'axios';
 class PokeApiService{
 
     apiClient = axios.create({
-        baseURL: 'https://pokeapi.co/api/v2/pokemon',
+        baseURL: 'https://pokeapi.co/api/v2/',
         timeout: 10000
     });
 
-    async all(){
-        let response = await this.apiClient.get('/', {
+    async allPokemons(){
+        let response = await this.apiClient.get('/pokemon/', {
             params: {
                 offset: 20,
                 limit: 20
@@ -28,6 +28,13 @@ class PokeApiService{
 
         return result.data
     }
+
+    async getPokemonByName(name){
+        let result = await this.apiClient.get(`/pokemon/${name}`)
+
+        return result.data
+    }
+
 }
 
 export default new PokeApiService();

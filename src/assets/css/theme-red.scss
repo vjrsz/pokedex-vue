@@ -1,0 +1,22 @@
+$theme: var(--bs-danger);
+
+.red {
+    #search .search-form .search-form-group,
+    .pokeball,
+    .pokeball__inner-circle,
+    .pokeball__line,
+    .list-card,
+    .list-card-types li
+    {
+        border-color: $theme !important;
+    }
+
+    .pokeball__inner-circle
+    {
+        background: $theme !important;
+    }
+
+    .list-card-types li{
+        color: $theme !important;
+    }
+}

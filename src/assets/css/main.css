@@ -1,3 +1,6 @@
+@import "theme-blue.scss";
+@import "theme-red.scss";
+
 *{
     margin: 0;
     padding: 0;
@@ -13,4 +16,37 @@ html, body, #app {
 
 #app{
     background-color: var(--bs-dark);
+}
+
+.anim-wobbling{
+    animation: wobbling 2s 3s infinite alternate;
+}
+.anim-spinning {
+    animation: spinning 7s ease-in-out infinite;
+}
+.anim-jumpy {
+    animation: jumpy 2s 1s infinite alternate;
+}
+@keyframes jumpy {
+    0% { transform: translateY(0%) }
+    1% { transform: translateY(0.5%) }
+    5% { transform: translateY(-10%) }
+    6% { transform: translateY(-11%) }
+    7% { transform: translateY(-10%) }
+    10% { transform: translateY(0%) }
+    100% { transform: translateY(0%) }
+}
+@keyframes wobbling {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(-10deg); }
+    10% { transform: rotate(0deg); }
+    90% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+@keyframes spinning {
+    0%   { transform: translateX(-70%); }
+    25%  { transform: translateX(75%); }
+    50%  { transform: translateX(-70%); }
+    75%  { transform: translateX(75%); }
+    100% { transform: translateX(-70%); }
 }

@@ -1,8 +1,9 @@
 <template>
+
     <section id="list">
         <div class="row d-flex align-items-end justify-content-center" v-show="isVisibleListHome">
-            <div class="list-card col-sm-3 m-3"
-                 v-for="pokemon in pokemons.results" :key="pokemon.id">
+            <div class="list-card col-sm-3 m-3" @click="onClickPokemon(pokemon)"
+                 v-for="pokemon in getPokemons" :key="pokemon.id">
                 <div class="list-card-img">
                     <img :src="pokemon.status.sprites.front_default" :alt="pokemon.name">
                 </div>
@@ -18,22 +19,30 @@
     </section>
 </template>
 <script>
-
-import { mapState } from "vuex";
+import {mapActions, mapGetters} from "vuex";
+import router from "@/router";
 
 export default {
     name: "ListHome",
-    computed:{
-        ...mapState(['pokemons']),
+    computed: {
+        ...mapGetters('pokemon', ['getPokemons']),
         isVisibleListHome(){
-            console.log(this.pokemons)
-            return this.pokemons.results
-                && this.pokemons.results.length
-                && this.pokemons.results[0].status;
+            return this.getPokemons
+                && this.getPokemons.length
+                && this.getPokemons[0].status;
         }
     },
-    created() {
-        this.$store.dispatch('pokemon/allPokemons');
+    methods: {
+        ...mapActions('pokemon', ['loadPokemons']),
+        onClickPokemon(pokemon){
+            router.push({
+                name: 'pokemon',
+                params: { name: pokemon.name }
+            })
+        }
+    },
+    created(){
+        this.loadPokemons();
     }
 }
 </script>
@@ -48,6 +57,7 @@ export default {
         border-radius: 15px;
         padding: 25px;
         text-align: center;
+        cursor: pointer;
     }
     .list-card-title{
         text-transform: capitalize;
@@ -75,19 +85,6 @@ export default {
         margin: 0;
         padding: 0;
     }
-    .list-card-details-title {
-        width: 100%;
-    }
-    .list-card-details-title .title{
-        font-weight: 300;
-        font-size: 1rem;
-    }
-    .list-card-details-title::after{
-        content: "";
-        display: flex;
-        width: 100%;
-        border-bottom: 1px solid #ccc;
-    }
     .list-card-types{
         display: flex;
         align-self: start;
@@ -105,6 +102,6 @@ export default {
         color: var(--bs-danger);
         font-size: 1rem;
         font-weight: 400;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
     }
 </style>
