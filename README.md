@@ -8,10 +8,10 @@ Bem-vindo ao repositório da Pokédex desenvolvida em Vue.js! Esta é uma aplica
 - Detalhes do Pokémon: Clique em um Pokémon na lista para exibir informações detalhadas, incluindo tipo, altura, peso, habilidades e descrição.
 - Busca: Utilize a função de busca para encontrar um Pokémon específico pelo nome.
 - Responsividade: A aplicação é totalmente responsiva, garantindo uma experiência consistente em dispositivos móveis e desktop.
-- 
+
 # Tecnologias Utilizadas
 - Vue.js: Um framework JavaScript progressivo para a construção de interfaces de usuário.
-- <a href="pokeapi.co">PokéAPI</a>: Uma API pública que fornece informações detalhadas sobre os Pokémon.
+- <a href="https://pokeapi.co">PokéAPI</a>: Uma API pública que fornece informações detalhadas sobre os Pokémon.
 - HTML5: Linguagem de marcação para estruturar a aplicação.
 - CSS3: Folhas de estilo para o design e layout da aplicação.
 - Axios: Biblioteca para realizar requisições HTTP para a PokéAPI.
@@ -47,6 +47,6 @@ Se você deseja contribuir para este projeto e adicionar novos recursos, corrigi
 Este projeto foi desenvolvido com carinho por Valter Junior.
 
 ## Licença
-Este projeto é licenciado sob a Licença MIT - veja o arquivo <a href="">LICENSE</a> para detalhes.
+Este projeto é licenciado sob a Licença MIT - veja o arquivo <a href="./LICENSE">LICENSE</a> para detalhes.
 
 Divirta-se explorando a Pokédex em Vue.js! Gotta catch 'em all! 🌟🔍👾
