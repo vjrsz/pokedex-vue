@@ -1,56 +1,56 @@
-# Pokédex em Vue.js
-Bem-vindo ao repositório da Pokédex desenvolvida em Vue.js! Esta é uma aplicação web que permite aos usuários explorar e buscar informações sobre diferentes espécies de Pokémon. Através desta Pokédex, você poderá visualizar detalhes de cada Pokémon, incluindo suas características, tipos, habilidades e muito mais.
+# Pokédex in Vue.js
+Welcome to the Pokédex repository developed in Vue.js! This is a web application that allows users to explore and search for information about different species of Pokémon. Through this Pokédex, you will be able to view details of each Pokémon, including its characteristics, types, abilities and much more.
 
 <img src="./public/img.png" alt="home pokédex"/>
 <a href="https://vjrsz.github.io/pokedex-vue/">Preview</a>
 
-## Funcionalidades
-- Listas de Pokémons: Veja uma lista completa de todos os Pokémon disponíveis, com suas imagens e nomes.
-- Detalhes do Pokémon: Clique em um Pokémon na lista para exibir informações detalhadas, incluindo tipo, altura, peso, habilidades e descrição.
-- Responsividade: A aplicação é totalmente responsiva, garantindo uma experiência consistente em dispositivos móveis e desktop.
+## Functionalities
+- Pokémon Lists: See a complete list of all available Pokémon, with their images and names.
+- Pokémon Details: Click on a Pokémon in the list to display detailed information, including type, height, weight, abilities, and description.
+- Responsiveness: The application is fully responsive, ensuring a consistent experience across mobile and desktop devices.
 
-# Tecnologias Utilizadas
-- Vue.js: Um framework JavaScript progressivo para a construção de interfaces de usuário.
+# Technologies Used
+- Vue.js: A progressive JavaScript framework for building user interfaces.
   - Vue Store
   - Vue Router
-- HTML5: Linguagem de marcação para estruturar a aplicação.
-- CSS3: Folhas de estilo para o design e layout da aplicação.
+- HTML5: Markup language to structure the application.
+- CSS3: Style sheets for application design and layout.
   - Bootstrap
   - SASS
-- Axios: Biblioteca para realizar requisições HTTP para a PokéAPI.
-- <a href="https://pokeapi.co">PokéAPI</a>: Uma API pública que fornece informações detalhadas sobre os Pokémon.
+- Axios: Library to perform HTTP requests to the PokéAPI.
+- <a href="https://pokeapi.co">PokéAPI</a>: A public API that provides detailed information about Pokémon.
 
-## Como Rodar a Aplicação
-Clone este repositório para o seu ambiente local usando o comando:
+## How to Run the Application
+Clone this repository to your local environment using the command:
 ```
 git clone https://github.com/vjrsz/pokedex-vue.git
 ```
-Navegue até o diretório do projeto:
+Navigate to the project directory:
 ```
 cd pokedex-vue
 ```
-Instale as dependências necessárias com o npm (ou yarn, se preferir):
+Install the necessary dependencies with npm (or yarn, if you prefer):
 ```
 npm install
 ```
-Inicie a aplicação:
+Start the application:
 ```
-npm run serve
+npm run serves
 ```
-Acesse a aplicação no seu navegador através do link:
+Access the application in your browser through the link:
 ```
 http://localhost:5173/
 ```
 
-## Contribuição
-Se você deseja contribuir para este projeto e adicionar novos recursos, corrigir bugs ou melhorar a experiência do usuário, fique à vontade para criar um Pull Request. Sua contribuição é muito bem-vinda!
+## Contribution
+If you want to contribute to this project and add new features, fix bugs or improve the user experience, feel free to create a Pull Request. Your contribution is most welcome!
 
-<i style="color:#f00">Certifique-se de testar sua contribuição localmente antes de submetê-la. </i>
+<i style="color:#f00">Be sure to test your contribution locally before submitting. </i>
 
-## Autor
-Este projeto foi desenvolvido com carinho por Valter Junior.
+## Author
+This project was developed by Valter Junior.
 
-## Licença
-Este projeto é licenciado sob a Licença MIT - veja o arquivo <a href="./LICENSE">LICENSE</a> para detalhes.
+## License
+This project is licensed under the MIT License - see the <a href="./LICENSE">LICENSE</a> file for details.
 
-Divirta-se explorando a Pokédex em Vue.js! Gotta catch 'em all! 🌟🔍👾
+Have fun exploring the Pokédex in Vue.js! Gotta catch 'em all! 🌟🔍👾
