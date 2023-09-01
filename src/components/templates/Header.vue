@@ -14,7 +14,7 @@ import ThemeToggle from "@/components/templates/ThemeToggle.vue";
 
 export default {
     name: 'HeaderHome',
-    components: {ThemeToggle}
+    components: {ThemeToggle},
 }
 </script>
 

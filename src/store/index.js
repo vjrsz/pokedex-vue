@@ -1,9 +1,14 @@
 import { createStore } from 'vuex';
 import PokemonStore from './modules/PokemonStore'
+import loadingGuard from "@/store/guards/loadingGuard";
+import router from "@/router";
+
+router.beforeEach(loadingGuard.before)
+router.afterEach(loadingGuard.after)
 
 const state = () => ({
     theme: 'red',
-    loading: true,
+    loading: false,
 })
 
 const getters = {
@@ -19,6 +24,10 @@ const actions = {
     changeTheme({ commit, getters  }){
         const theme = getters.getTheme === 'red' ? 'blue' : 'red'
         commit('setTheme', theme);
+    },
+    showLoading({ commit, getters }){
+        const loading = !getters.getLoading
+        commit('setLoading', loading);
     }
 }
 
@@ -40,3 +49,7 @@ export default createStore({
         pokemon: PokemonStore
     },
 });
+
+
+
+

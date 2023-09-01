@@ -59,11 +59,12 @@ export default {
                     })
                 }
                 this.pokemon = pokemon
+                this.$store.commit('setLoading', false);
             })
         }
     },
     created() {
-        this.loadPokemon();
+        this.loadPokemon()
     },
     computed: {
         namePokemon(){
