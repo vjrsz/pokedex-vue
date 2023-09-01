@@ -3,12 +3,16 @@ import PokemonStore from './modules/PokemonStore'
 
 const state = () => ({
     theme: 'red',
+    loading: true,
 })
 
 const getters = {
     getTheme(state){
         return state.theme
-    }
+    },
+    getLoading(state){
+        return state.loading
+    },
 }
 
 const actions = {
@@ -21,6 +25,9 @@ const actions = {
 const mutations = {
     setTheme(state, theme){
         state.theme = theme
+    },
+    setLoading(state, loading){
+        state.loading = loading
     }
 }
 

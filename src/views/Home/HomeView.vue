@@ -1,5 +1,5 @@
 <template>
-    <Search />
+    <Search v-show="false"/>
     <List />
 </template>
 

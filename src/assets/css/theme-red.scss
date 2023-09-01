@@ -11,7 +11,9 @@ $theme: var(--bs-danger);
         border-color: $theme !important;
     }
 
-    .pokeball__inner-circle
+    .pokeball__inner-circle,
+    .pokemon-data-container .badge
+
     {
         background: $theme !important;
     }

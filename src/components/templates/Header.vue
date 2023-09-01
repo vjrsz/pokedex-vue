@@ -4,7 +4,7 @@
             <ThemeToggle />
         </div>
         <div class="header-title">
-            <h1>POKÉDEX</h1>
+            <h1><router-link class="text-decoration-none text-white" to="/">POKÉDEX</router-link></h1>
         </div>
     </header>
 </template>

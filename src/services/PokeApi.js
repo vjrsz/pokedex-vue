@@ -8,7 +8,7 @@ class PokeApiService{
     });
 
     async allPokemons(){
-        let response = await this.apiClient.get('/pokemon/', {
+        let response = await this.apiClient.get('/pokemon', {
             params: {
                 offset: 20,
                 limit: 20
@@ -30,9 +30,16 @@ class PokeApiService{
     }
 
     async getPokemonByName(name){
-        let result = await this.apiClient.get(`/pokemon/${name}`)
-
-        return result.data
+        try {
+            let result = await this.apiClient.get(`/pokemon/${name}`);
+            return result.data;
+        } catch (error) {
+            if (error.response && error.response.status === 404) {
+                return null;
+            } else {
+                throw error;
+            }
+        }
     }
 
 }

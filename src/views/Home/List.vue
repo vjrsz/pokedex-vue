@@ -2,7 +2,7 @@
 
     <section id="list">
         <div class="row d-flex align-items-end justify-content-center" v-show="isVisibleListHome">
-            <div class="list-card col-sm-3 m-3" @click="onClickPokemon(pokemon)"
+            <div class="list-card col-lg-3 col-sm-4 m-3" @click="onClickPokemon(pokemon)"
                  v-for="pokemon in getPokemons" :key="pokemon.id">
                 <div class="list-card-img">
                     <img :src="pokemon.status.sprites.front_default" :alt="pokemon.name">
@@ -42,7 +42,7 @@ export default {
         }
     },
     created(){
-        this.loadPokemons();
+        this.loadPokemons().then(() => this.$store.commit('setLoading', false));
     }
 }
 </script>

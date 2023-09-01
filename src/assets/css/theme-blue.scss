@@ -11,7 +11,8 @@ $theme: var(--bs-blue);
         border-color: $theme !important;
     }
 
-    .pokeball__inner-circle
+    .pokeball__inner-circle,
+    .pokemon-data-container .badge
     {
         background: $theme !important;
     }
